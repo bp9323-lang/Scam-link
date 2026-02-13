@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIF & Music on Click</title>
+<style>
+  #gifContainer {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Do you want to see the surprise?</h2>
+<button id="yesBtn">Yes</button>
+
+<div id="gifContainer">
+  <img src="your-gif.gif" alt="Surprise GIF" width="300">
+  <audio id="audio" src="your-music.mp3"></audio>
+</div>
+
+<script>
+  const yesBtn = document.getElementById('yesBtn');
+  const gifContainer = document.getElementById('gifContainer');
+  const audio = document.getElementById('audio');
+
+  yesBtn.addEventListener('click', () => {
+    gifContainer.style.display = 'block';  // Show the GIF
+    audio.play();                          // Play the music
+  });
+</script>
+
+</body>
+</html>
